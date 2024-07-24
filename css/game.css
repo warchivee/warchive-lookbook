@@ -1,0 +1,133 @@
+.game section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #ece8e2;
+  word-break: keep-all;
+  gap: 4rem;
+  padding: 4rem 0;
+}
+
+.game section h3 {
+  font-family: var(--font-header);
+  font-size: 2rem;
+}
+
+#game {
+  width: 100%;
+  max-width: 600px;
+  background-color: rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+}
+
+#game .avatar {
+  position: relative;
+  height: 50vh;
+  max-height: 600px;
+  min-height: 300px;
+  aspect-ratio: 1 / 1;
+  margin: 1rem 0;
+}
+
+#game .avatar img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* save button */
+#game .avatar button {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+/* part button */
+#game .part-controls ul:first-child {
+  width: 100%;
+  height: 60px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
+  font-family: var(--font-sub-content);
+  font-size: 10px;
+}
+
+#game .part-controls ul:first-child li {
+  display: inline-block;
+  width: 15%;
+  height: 100%;
+  background-color: white;
+  position: relative;
+}
+
+#game .part-controls ul:first-child li img {
+  width: 100%;
+  height: 100%;
+}
+
+/* part buttons scroll */
+#game .part-controls ul:first-child::-webkit-scrollbar {
+  height: 10px;
+}
+
+#game .part-controls ul:first-child::-webkit-scrollbar-track {
+  background: white;
+}
+
+#game .part-controls ul:first-child::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.205);
+  border-radius: 10px;
+}
+
+#game .part-controls ul:first-child::-webkit-scrollbar-vertical {
+  width: 10px;
+}
+
+/* part items button */
+#game .part-controls div:last-child {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  align-content: start;
+  justify-items: center;
+  grid-gap: 10px;
+  padding: 1rem;
+}
+
+#game .part-controls div:last-child img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: white;
+  border-radius: 5px;
+  position: relative;
+}
+#game .part-controls ul:first-child li.selected:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.336);
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+#game .part-controls div:last-child img.selected {
+  outline: 3px dashed rgba(0, 0, 0, 0.87);
+}

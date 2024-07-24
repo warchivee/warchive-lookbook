@@ -1,0 +1,45 @@
+header {
+  background: #fff;
+  padding: 1rem 0;
+}
+
+header .logo {
+  display: block;
+  margin: 0 auto;
+  font-size: 300%;
+}
+
+header nav ul {
+  font-family: var(--font-header);
+  font-size: 1.25rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav ul li {
+  flex: 1;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+header nav ul li a {
+  display: inline-block;
+}
+
+header nav ul li a:after {
+  display: block;
+  margin-top: -5px;
+  content: "";
+  border-bottom: 1px solid black;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+header nav ul li.selected a:after {
+  transform: scaleX(1);
+}
+
+header nav ul li:not(.selected) a:hover:after {
+  transform: scaleX(1);
+}

@@ -1,0 +1,14 @@
+.logo {
+  width: fit-content;
+}
+
+.logo h1 {
+  font-family: var(--font-header);
+  display: inline;
+}
+
+.logo h1 b {
+  font-family: "Bodoni Moda", serif;
+  font-weight: 500;
+  font-style: italic;
+}

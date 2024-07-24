@@ -1,0 +1,32 @@
+.about section {
+  text-align: center;
+  height: 70vh;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ece8e2;
+  word-break: keep-all;
+}
+
+.about section h3 {
+  font-family: var(--font-header);
+  line-height: 1;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.about section p {
+  font-family: var(--font-sub-content);
+  margin-top: 10px;
+}
+
+.about section p:nth-child(2) {
+  font-size: 1.2rem;
+}
+
+.about section p em {
+  font-family: var(--font-content);
+  font-weight: bold;
+}
