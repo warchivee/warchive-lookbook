@@ -1,0 +1,74 @@
+.lookbook-details .gallery-wrap {
+  margin: 10px;
+}
+
+.lookbook-details .gallery {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+}
+
+.lookbook-details .gallery figure {
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.lookbook-details .gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition-duration: 0.3s;
+}
+
+.lookbook-details .flex {
+  display: flex;
+  gap: 5px;
+}
+
+.lookbook-details .flex-1 {
+  flex: 1;
+}
+
+.lookbook-details .flex-2 {
+  flex: 2;
+}
+
+.lookbook-details .flex-3 {
+  flex: 3;
+}
+
+.lookbook-details .flex-4 {
+  flex: 4;
+}
+
+.lookbook-details .flex-row {
+  flex-direction: row;
+}
+
+.lookbook-details .flex-col {
+  flex-direction: column;
+}
+
+
+@media (max-width: 750px) {
+  .lookbook-details .gallery {
+    flex-direction: column;
+    height: auto;
+    max-height: none;
+    min-height: 375px;
+  }
+  
+  .lookbook-details .flex-row.sm-reverse {
+    flex-direction: column;
+  }
+  
+  .lookbook-details .flex-col.sm-reverse {
+    flex-direction: row;
+  }
+  
+  .lookbook-details .flex-1.sm-bigger {
+    flex: 4;
+  }
+}

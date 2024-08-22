@@ -1,23 +1,50 @@
 .game section {
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: #ece8e2;
+  background-image: url('../images/about/background.png');
   word-break: keep-all;
-  gap: 4rem;
-  padding: 4rem 0;
+  gap: 2rem;
+  padding: 4rem 3rem;
 }
 
 .game section h3 {
   font-family: var(--font-header);
-  font-size: 2rem;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.game section h3.pc {
+  display: block;
+}
+
+.game section h3.mobile {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .game section {
+    flex-direction: column;
+  }
+
+  .game section h3 {
+    font-size: 1.2rem;
+  }
+  
+  .game section h3.pc {
+    display: none;
+  }
+
+  .game section h3.mobile {
+    display: block;
+  }
 }
 
 #game {
   width: 100%;
-  max-width: 600px;
+  max-width: 450px;
   background-color: rgba(0, 0, 0, 0.1);
 
   display: flex;
@@ -83,7 +110,7 @@
 }
 
 #game .part-controls ul:first-child::-webkit-scrollbar-track {
-  background: white;
+  background: none;
 }
 
 #game .part-controls ul:first-child::-webkit-scrollbar-thumb {

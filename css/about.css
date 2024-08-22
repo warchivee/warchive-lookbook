@@ -1,3 +1,8 @@
+.about {
+  width: 100%;
+  height: 100%;
+}
+
 .about section {
   text-align: center;
   height: 70vh;
@@ -6,27 +11,95 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #ece8e2;
+  background-image: url('/images/about/background.png');
   word-break: keep-all;
+  color: white;
 }
 
 .about section h3 {
-  font-family: var(--font-header);
+  font-family: var(--font-content);
   line-height: 1;
   font-size: 3rem;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .about section p {
   font-family: var(--font-sub-content);
-  margin-top: 10px;
+  margin: 10px 0;
 }
 
 .about section p:nth-child(2) {
   font-size: 1.2rem;
 }
 
+.about section p:nth-child(4) {
+  margin-top: 0;
+  font-size: 0.9rem;
+}
+
 .about section p em {
   font-family: var(--font-content);
   font-weight: bold;
+}
+
+.about section p a {
+  margin: 2px;
+  padding: 4px;
+  border-radius: 4px;
+  background: linear-gradient(112.96deg, #C30EFF 0%, #6E4BF7 100%);
+  transition: 0.5s;
+  color: white;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.about section p a:hover {
+  margin: 0px;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.about section p a * {
+  height: 16px;
+}
+
+.about section p a img  {
+  vertical-align: middle;
+}
+
+.about section p a i  {
+  color: inherit;
+}
+
+.about section p span {
+  margin: 0 12px;
+  letter-spacing: 0;
+  word-break: keep-all;
+}
+
+.about section.mobile {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .about section {
+    display: none;
+  }
+
+  .about section.mobile {
+    text-align: center;
+    width: 100%;
+    min-height: 70vh;
+    max-height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/images/about/background.png');
+    word-break: keep-all;
+    color: white;  
+  }
 }

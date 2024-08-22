@@ -10,6 +10,8 @@
 
 @import "about.css";
 @import "home.css";
+@import "lookbook.css";
+@import "lookbook-details.css";
 @import "game.css";
 
 * {
@@ -35,6 +37,10 @@ footer {
   min-width: 375px;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+main {
+  margin-top: 175px;
 }
 
 b {
