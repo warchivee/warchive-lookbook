@@ -1,70 +1,69 @@
 .lookbook {
-    width: 100%;
-    height: fit-content;
+  width: 100%;
+  height: fit-content;
 }
 
 .lookbook section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .lookbook section .grid {
-    width: 100%;
-    max-width: 1040px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  max-width: 1040px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .lookbook section .mobile {
-    display: none;
+  display: none;
 }
 
 .lookbook section .grid a {
-    overflow: hidden;
-    cursor: pointer;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .lookbook section .grid *,
 .lookbook section .grid img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .lookbook section .grid a img {
-    object-fit: cover;
-    transition-duration: 0.3s;
+  object-fit: cover;
+  transition-duration: 0.3s;
 }
 
 .lookbook section .grid a img:hover {
-    transform: scale(1.1, 1.1);
-    transition-duration: 0.5s;
+  transform: scale(1.1, 1.1);
+  transition-duration: 0.5s;
 }
 
 @media (max-width: 500px) {
-    .lookbook section .grid {
-        display: none;
-    }
+  .lookbook section .grid {
+    display: none;
+  }
 
-    .lookbook section .mobile {
-        width: fit-content;
-        display: grid;
-        grid-template-columns: repeat(3, 120px);
-        grid-template-rows: repeat(3, 180px);
-        gap: 5px;
-        justify-content: center;
-        align-items: center;
-    }
+  .lookbook section .mobile {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 180px);
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .lookbook section .grid *,
-    .lookbook section .grid img {
-        width: 120px;
-        height: 180px;
-    }
+  .lookbook section .grid *,
+  .lookbook section .grid img {
+    width: 120px;
+    height: 180px;
+  }
 }
-  

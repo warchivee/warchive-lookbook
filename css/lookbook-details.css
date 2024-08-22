@@ -19,7 +19,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition-duration: 0.3s;
 }
 
 .lookbook-details .flex {
@@ -51,7 +50,6 @@
   flex-direction: column;
 }
 
-
 @media (max-width: 750px) {
   .lookbook-details .gallery {
     flex-direction: column;
@@ -59,16 +57,31 @@
     max-height: none;
     min-height: 375px;
   }
-  
+
   .lookbook-details .flex-row.sm-reverse {
     flex-direction: column;
   }
-  
+
   .lookbook-details .flex-col.sm-reverse {
     flex-direction: row;
   }
-  
+
   .lookbook-details .flex-1.sm-bigger {
     flex: 4;
   }
+}
+
+.lookbook-details .gallery figure,
+.lookbook-details .gallery figure a {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.lookbook-details .gallery a img {
+  transition-duration: 0.3s;
+}
+
+.lookbook-details .gallery img:hover {
+  transform: scale(1.1, 1.1);
+  transition-duration: 0.5s;
 }
