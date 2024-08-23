@@ -54,7 +54,9 @@
   font-weight: bold;
 }
 
-.about section p em.warchive {
+.about section p a.warchive {
+  font-family: var(--font-content);
+  font-weight: bold;
   padding: 0 5px;
   cursor: pointer;
 }
