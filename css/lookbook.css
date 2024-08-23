@@ -1,8 +1,3 @@
-.lookbook {
-  width: 100%;
-  height: fit-content;
-}
-
 .lookbook section {
   display: flex;
   flex-direction: column;
@@ -12,7 +7,6 @@
 
 .lookbook section .grid {
   width: 100%;
-  max-width: 1040px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, auto);
@@ -46,16 +40,16 @@
   transition-duration: 0.5s;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 750px) {
   .lookbook section .grid {
     display: none;
   }
 
   .lookbook section .mobile {
-    width: fit-content;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 120px);
-    grid-template-rows: repeat(3, 180px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 5px;
     justify-content: center;
     align-items: center;
@@ -63,7 +57,13 @@
 
   .lookbook section .grid *,
   .lookbook section .grid img {
-    width: 120px;
-    height: 180px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .lookbook section .grid a img {
+    width: 100%;
+    height: 100%;
   }
 }

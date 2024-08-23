@@ -7,10 +7,10 @@
 .home .intro {
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 60vh;
   min-height: 500px;
   max-height: 660px;
-  background-image: url("/images/home/home_image.jpg");
+  background-image: url("images/home/home_image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }

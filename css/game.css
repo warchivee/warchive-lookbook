@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-image: url('../images/about/background.png');
+  background: #ece8e2;
   word-break: keep-all;
   gap: 2rem;
   padding: 4rem 3rem;
@@ -13,7 +13,6 @@
 .game section h3 {
   font-family: var(--font-header);
   font-size: 1.6rem;
-  color: white;
 }
 
 .game section h3.pc {
@@ -24,7 +23,7 @@
   display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 970px) {
   .game section {
     flex-direction: column;
   }
@@ -32,7 +31,7 @@
   .game section h3 {
     font-size: 1.2rem;
   }
-  
+
   .game section h3.pc {
     display: none;
   }
