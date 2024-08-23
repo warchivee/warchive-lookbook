@@ -26,16 +26,13 @@ function stopCarousel() {
     clearInterval(slideInterval);
 }
 
-startCarousel();
-
 images.forEach(image => {
     image.addEventListener('mouseenter', () => {
         stopCarousel();
-        image.classList.add('hover-effect');
     });
-
     image.addEventListener('mouseleave', () => {
         startCarousel();
-        image.classList.remove('hover-effect');
     });
 });
+
+startCarousel();
