@@ -61,11 +61,11 @@
   cursor: pointer;
 }
 
-.about section p em.warchive img {
+.about section p a.warchive img {
   margin-left: 5px;
 }
 
-.about section p em.warchive:after {
+.about section p a.warchive:after {
   display: block;
   content: "";
   border-bottom: 1px solid black;
@@ -74,6 +74,6 @@
   transition: transform 250ms ease-in-out;
 }
 
-.about section p em.warchive:hover:after {
+.about section p a.warchive:hover:after {
   transform: scaleX(1);
 }
