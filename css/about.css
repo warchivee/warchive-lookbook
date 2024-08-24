@@ -44,6 +44,11 @@
   font-size: 1.2rem;
 }
 
+.about section div:first-child p:nth-child(2) span {
+  display: inline-block;
+  margin-right: 4px;
+}
+
 .about section div:last-child p {
   font-size: small;
   gap: 10px;
@@ -52,6 +57,12 @@
 .about section p em {
   font-family: var(--font-content);
   font-weight: bold;
+}
+
+.about section p:nth-child(3) span:first-child {
+  display: flex;
+  white-space : nowrap;
+  margin-right: 3px;
 }
 
 .about section p a.warchive {
