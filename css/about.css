@@ -88,3 +88,7 @@
 .about section p a.warchive:hover:after {
   transform: scaleX(1);
 }
+
+.about section div:last-child p em {
+  font-family: var(--font-sub-content);
+}
