@@ -16,14 +16,25 @@ footer p {
 }
 
 footer p.sns-link {
-  margin-top: 20px;
+  margin: 0 0 30px 0;
+}
+
+footer p.sns-link a {
+  /* background: black; */
+  border-radius: 100%;
 }
 
 footer p:last-child {
   font-family: var(--font-header);
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 footer .logo {
   font-size: 1.7rem;
+}
+
+@media (max-width: 500px) {
+  footer p:nth-child(3) {
+    font-size: 0.8rem;
+  }
 }
