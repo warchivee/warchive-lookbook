@@ -1,23 +1,25 @@
 const partsCounts = {
-  head: 1,
-  eyebrows: 1,
-  eyes: 1,
-  mouth: 1,
-  nose: 1,
-  bottom: 2,
-  top: 1,
-  shoes: 1,
+  eyebrows: 10,
+  eyes: 10,
+  nose: 10,
+  mouth: 10,
+  head: 12,
+  top: 12,
+  bottom: 12,
+  shoes: 12,
+  accessories: 9,
 };
 
 const selectedParts = {
-  head: 1,
   eyebrows: 1,
   eyes: 1,
-  mouth: 1,
   nose: 1,
-  bottom: 1,
+  mouth: 1,
+  head: 1,
   top: 1,
+  bottom: 1,
   shoes: 1,
+  accessories: 1,
 };
 
 function saveImage() {
@@ -51,7 +53,7 @@ function loadParts(category) {
   for (let index = 0; index < partsCounts[category]; index++) {
     const img = document.createElement("img");
 
-    img.src = `images/game/${category}/${category}${index + 1}.png`;
+    img.src = `images/game/${category}/thumbnail/${index + 1}.png`;
     img.alt = `${category} ${index + 1}`;
     img.setAttribute("data-part-id", index + 1);
 
@@ -68,7 +70,7 @@ function loadParts(category) {
         `#avatar img[data-value="${category}"]`
       );
 
-      part.src = `images/game/${category}/${category}${this.getAttribute(
+      part.src = `images/game/${category}/parts/${this.getAttribute(
         "data-part-id"
       )}.png`;
       selectedParts[category] = this.getAttribute("data-part-id");
@@ -98,4 +100,4 @@ function initPartCategoryButtons() {
 
 initPartCategoryButtons();
 
-loadParts("head");
+loadParts("eyebrows");

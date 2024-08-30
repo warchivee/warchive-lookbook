@@ -46,39 +46,42 @@
             <img class="avatar__part" src="images/game/body.png" alt="몸" />
             <img
               data-value="head"
-              src="images/game/head/head1.png"
+              src="images/game/head/parts/1.png"
               alt="머리"
             />
             <img
               data-value="eyebrows"
-              src="images/game/eyebrows/eyebrows1.png"
+              src="images/game/eyebrows/parts/1.png"
               alt="눈썹"
             />
-            <img data-value="eyes" src="images/game/eyes/eyes1.png" alt="눈" />
-            <img data-value="nose" src="images/game/nose/nose1.png" alt="코" />
+            <img data-value="eyes" src="images/game/eyes/parts/1.png" alt="눈" />
+            <img data-value="nose" src="images/game/nose/parts/1.png" alt="코" />
             <img
               data-value="mouth"
-              src="images/game/mouth/mouth1.png"
+              src="images/game/mouth/parts/1.png"
               alt="입"
             />
             <img
               data-value="shoes"
-              src="images/game/shoes/shoes1.png"
+              src="images/game/shoes/parts/1.png"
               alt="신발"
             />
             <img
               data-value="bottom"
-              src="images/game/bottom/bottom1.png"
+              src="images/game/bottom/parts/1.png"
               alt="하의"
             />
-            <img data-value="top" src="images/game/top/top1.png" alt="상의" />
+            <img
+              data-value="accessories"
+              src="images/game/accessories/parts/1.png"
+              alt="액세서리"
+              style="z-index: 10;"
+            />
+            <img data-value="top" src="images/game/top/parts/1.png" alt="상의" />
           </div>
           <div class="part-controls">
             <ul id="partCategories">
-              <li class="selected" data-part="head">
-                <img src="images/icons/head-icon.svg" alt="머리-아이콘" />
-              </li>
-              <li data-part="eyebrows">
+              <li class="selected" data-part="eyebrows">
                 <img src="images/icons/eyebrows-icon.svg" alt="눈썹-아이콘" />
               </li>
               <li data-part="eyes">
@@ -90,14 +93,20 @@
               <li data-part="mouth">
                 <img src="images/icons/mouth-icon.svg" alt="입-아이콘" />
               </li>
-              <li data-part="shoes">
-                <img src="images/icons/shoes-icon.svg" alt="신발-아이콘" />
+              <li data-part="head">
+                <img src="images/icons/head-icon.svg" alt="머리-아이콘" />
+              </li>
+              <li data-part="top">
+                <img src="images/icons/top-icon.svg" alt="상의-아이콘" />
               </li>
               <li data-part="bottom">
                 <img src="images/icons/bottom-icon.svg" alt="하의-아이콘" />
               </li>
-              <li data-part="top">
-                <img src="images/icons/top-icon.svg" alt="상의-아이콘" />
+              <li data-part="shoes">
+                <img src="images/icons/shoes-icon.svg" alt="신발-아이콘" />
+              </li>
+              <li data-part="accessories">
+                <img src="images/icons/accessories-icon.svg" alt="액세서리-아이콘" />
               </li>
             </ul>
             <div id="parts"></div>

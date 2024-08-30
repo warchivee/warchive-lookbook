@@ -162,13 +162,29 @@
 /* part items button */
 #game .part-controls div:last-child {
   width: 100%;
-  height: 100%;
+  height: 300px;
+  overflow-y: scroll;
+  overflow-x: hidden;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   align-content: start;
   justify-items: center;
   grid-gap: 10px;
   padding: 1rem;
+}
+
+/* part items scroll */
+#game .part-controls div:last-child::-webkit-scrollbar {
+  width: 10px;
+}
+
+#game .part-controls div:last-child::-webkit-scrollbar-track {
+  background: none;
+}
+
+#game .part-controls div:last-child::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.205);
+  border-radius: 10px;
 }
 
 #game .part-controls div:last-child img {
@@ -179,6 +195,7 @@
   border-radius: 5px;
   position: relative;
 }
+
 #game .part-controls ul:first-child li.selected:before {
   content: "";
   position: absolute;
