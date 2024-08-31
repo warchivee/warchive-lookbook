@@ -29,8 +29,8 @@ function saveImage() {
 
   const width = 600;
   const height = 600;
-  const padding = 20;
-  const footerHeight = 100;
+  const padding = 10;
+  const footerHeight = 90;
 
   canvas.width = width;
   canvas.height = height + footerHeight;
@@ -42,8 +42,8 @@ function saveImage() {
   const logoImage = new Image();
   logoImage.src = '/images/game/nmc_logo_txt.png';
   logoImage.onload = () => {
-    const logoWidth = 200;
-    const logoHeight = 50;
+    const logoWidth = 197;
+    const logoHeight = 25;
     const logoX = (canvas.width - logoWidth) / 2;
     const logoY = height + padding;
     context.drawImage(logoImage, logoX, logoY, logoWidth, logoHeight);
@@ -52,7 +52,7 @@ function saveImage() {
     context.font = "20px Arial";
     context.fillStyle = "#000000";
     const textX = (canvas.width - context.measureText(text).width) / 2;
-    const textY = logoY + logoHeight + padding;
+    const textY = logoY + logoHeight + padding * 3;
     context.fillText(text, textX, textY);
 
     const link = document.createElement("a");
