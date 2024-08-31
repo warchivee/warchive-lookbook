@@ -29,18 +29,37 @@ function saveImage() {
 
   const width = 600;
   const height = 600;
+  const padding = 20;
+  const footerHeight = 100;
 
-  canvas.width = 600;
-  canvas.height = 600;
+  canvas.width = width;
+  canvas.height = height + footerHeight;
 
   images.forEach((img) => {
     context.drawImage(img, 0, 0, width, height);
   });
+  
+  const logoImage = new Image();
+  logoImage.src = '/images/game/nmc_logo_txt.png';
+  logoImage.onload = () => {
+    const logoWidth = 200;
+    const logoHeight = 50;
+    const logoX = (canvas.width - logoWidth) / 2;
+    const logoY = height + padding;
+    context.drawImage(logoImage, logoX, logoY, logoWidth, logoHeight);
 
-  const link = document.createElement("a");
-  link.download = "my corset-free avatar.png";
-  link.href = canvas.toDataURL();
-  link.click();
+    const text = "nomore-corset.womynarchive.com";
+    context.font = "20px Arial";
+    context.fillStyle = "#000000";
+    const textX = (canvas.width - context.measureText(text).width) / 2;
+    const textY = logoY + logoHeight + padding;
+    context.fillText(text, textX, textY);
+
+    const link = document.createElement("a");
+    link.download = "my_corset-free_avatar.png";
+    link.href = canvas.toDataURL();
+    link.click();
+  };
 }
 
 function loadParts(category) {
